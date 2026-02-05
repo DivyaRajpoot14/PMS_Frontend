@@ -1,0 +1,68 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-100">
+
+  <form
+    [formGroup]="signupForm"
+    (ngSubmit)="onSubmit()"
+    class="bg-white shadow-lg rounded-xl p-8 w-full max-w-md space-y-5"
+  >
+
+    <h2 class="text-2xl font-bold text-center text-indigo-600">
+      Sign Up
+    </h2>
+
+    <!-- Name -->
+    <div>
+      <label class="block mb-1 text-sm font-medium">Name</label>
+      <input
+        type="text"
+        formControlName="name"
+        class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        placeholder="Enter name"
+      />
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label class="block mb-1 text-sm font-medium">Email</label>
+      <input
+        type="email"
+        formControlName="email"
+        class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        placeholder="Enter email"
+      />
+    </div>
+
+    <!-- Password -->
+    <div>
+      <label class="block mb-1 text-sm font-medium">Password</label>
+      <input
+        type="password"
+        formControlName="password"
+        class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        placeholder="Enter password"
+      />
+    </div>
+
+    <!-- Role -->
+    <div>
+      <label class="block mb-1 text-sm font-medium">Role</label>
+      <select
+        formControlName="role"
+        class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      >
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+        <option value="manager">Manager</option>
+      </select>
+    </div>
+
+    <!-- Button -->
+    <button
+      type="submit"
+      class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
+    >
+      Create Account
+    </button>
+
+  </form>
+</div>
